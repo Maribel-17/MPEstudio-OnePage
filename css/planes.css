@@ -35,6 +35,10 @@
   line-height: 1.5rem;
 }
 
+.sello-codigo {
+  display: none;
+}
+
 .contenedor-planes {
   max-width: 1200px;
   margin: 2rem 0 2rem;
@@ -155,6 +159,26 @@
     font-size: 2.2rem;
   }
 
+  .section-planes {
+    position: relative;
+  }
+
+  .sello-codigo {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    transform: translate(-30%, -10%);
+    width: 130px;
+    z-index: 10;
+  }
+
+  .sello-codigo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   .plan-titulo {
     font-size: 1.6rem;
   }
@@ -176,6 +200,13 @@
   .section-planes {
     text-align: left;
     max-width: 1200px;
+  }
+
+  .sello-codigo {
+    width: 180px;
+    top: 40px;
+    right: 0;
+    transform: translate(-30%, -10%);
   }
 
   .contenedor-planes {
