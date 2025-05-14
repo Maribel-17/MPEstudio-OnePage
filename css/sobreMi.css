@@ -45,6 +45,11 @@
   margin: 2rem 0px;
 }
 
+.container-img-sobreMi:hover {
+  transform: scale(1.1) rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
 @media screen and (min-width: 768px) {
   .section-sobreMi h5 {
     font-size: 1rem;

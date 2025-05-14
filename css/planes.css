@@ -150,6 +150,18 @@
   background-color: var(--color14);
 }
 
+@keyframes flotar {
+  0% {
+    transform: translate(-30%, -10%);
+  }
+  50% {
+    transform: translate(-30%, -20%);
+  }
+  100% {
+    transform: translate(-30%, -10%);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .section-planes h5 {
     font-size: 1rem;
@@ -171,6 +183,8 @@
     transform: translate(-30%, -10%);
     width: 130px;
     z-index: 10;
+    animation: flotar 3s ease-in-out infinite;
+    width: 140px;
   }
 
   .sello-codigo img {
@@ -203,7 +217,7 @@
   }
 
   .sello-codigo {
-    width: 180px;
+    width: 170px;
     top: 40px;
     right: 0;
     transform: translate(-30%, -10%);

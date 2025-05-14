@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   width: 100%;
   padding: 4rem 1rem;
+  position: relative;
 }
 
 .contenedor-hero {
@@ -17,6 +18,7 @@
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
+  z-index: 1;
 }
 
 /* Imagen */
@@ -49,6 +51,7 @@
   margin-bottom: 1.5rem;
 }
 
+
 .hero-texto p {
   font-size: 1rem;
   color: var(--color1);
@@ -79,6 +82,7 @@
 .btn-hero:hover {
   background-color: var(--color14);
 }
+
 
 /* Tablet */
 @media screen and (min-width: 768px) {
