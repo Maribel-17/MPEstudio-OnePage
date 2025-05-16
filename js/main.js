@@ -29,3 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
   ajustarPadding();
   window.addEventListener("resize", ajustarPadding);
 });
+
+
+const parte1 = "consultas";
+  const parte2 = "mpestudiodisenio";
+  const parte3 = "com.ar";
+  const email = `${parte1}@${parte2}.${parte3}`;
+
+  const emailText = document.getElementById("email-text");
+  emailText.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+
+
