@@ -3,7 +3,7 @@
 footer {
   background-color: var(--color1);
   text-align: center;
-  padding: 4rem 2rem 2rem;
+  padding: 4rem 1.5rem 2rem;
   color: var(--color11);
   margin: 0 auto;
   scroll-margin-top: 100px;
@@ -49,11 +49,28 @@ footer {
   margin-bottom: 1rem;
 }
 
-.contacto a {
+.contacto {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contacto li {
+  display: flex;
+  justify-content: center;
+}
+
+.contacto a {
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .contacto img {
@@ -64,6 +81,19 @@ footer {
   border: none;
   border-top: 1px solid var(--color11);
   margin: 1rem 0;
+}
+
+#email-text a {
+  color: var(--color11);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+}
+
+#email-text a:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
@@ -94,6 +124,18 @@ footer {
     line-height: 2.2rem;
     font-size: 1.1rem;
   }
+
+#email-text a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+#email-text a:hover {
+  text-decoration: underline;
+}
+
+
 }
 
 @media (min-width: 1024px) {
@@ -131,10 +173,9 @@ footer {
   }
 
   .contacto {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+  gap: 0rem;
+  align-items:start;
+}
 
   .contacto li {
     margin-bottom: 0.5rem;
@@ -159,3 +200,4 @@ footer {
     justify-content: flex-start;
   }
 }
+

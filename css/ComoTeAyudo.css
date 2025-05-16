@@ -108,6 +108,12 @@
     font-size: 1rem;
     margin-bottom: 0;
   }
+
+   .card img {
+    width: 50px;
+    height: auto;
+  }
+
 }
 
 @media screen and (min-width: 1024px) {
