@@ -61,6 +61,7 @@
   font-size: 1rem;
   display: inline-block;
   margin: 1.5rem 0rem;
+  min-width: 300px;
 }
 
 .btn-hablemos:hover {

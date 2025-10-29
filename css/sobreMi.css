@@ -32,13 +32,14 @@
 
 .section-sobreMi p {
   font-size: 1rem;
-  text-align: justify;
+  text-align: center;
   line-height: 1.5rem;
   color: var(--color3);
 }
 
 .section-sobreMi p strong {
   color: var(--color1);
+  font-size: 1.1rem;
 }
 
 .container-img-sobreMi {
@@ -72,6 +73,7 @@
 }
 
 @media screen and (min-width: 1024px) {
+
   .container-info-sobreMi {
     display: flex;
     flex-direction: row;
@@ -94,6 +96,7 @@
 
   .section-sobreMi p {
     font-size: 1.2rem;
+    text-align: justify;
   }
 
   .section-sobreMi p strong {
