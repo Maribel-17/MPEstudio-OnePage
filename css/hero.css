@@ -5,7 +5,7 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  padding: 4rem 1rem;
+  padding: 4rem 2rem;
   position: relative;
 }
 
@@ -55,9 +55,10 @@
 .hero-texto p {
   font-size: 1rem;
   color: var(--color1);
-  max-width: 40ch;
+  max-width: 100%;
   margin: 0 auto;
   margin-bottom: 1rem;
+  line-height: 1.8rem;
 }
 
 /* Botón */
