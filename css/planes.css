@@ -106,7 +106,6 @@
   margin: 1rem 0;
   font-weight: 700;
 }
-
 .listado li,
 .plan-lista li {
   position: relative;
@@ -327,4 +326,19 @@
   .boton-plan {
     margin-top: auto;
   }
+
+  .plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan-body {
+  flex-grow: 1;
+}
+
+.plan-footer {
+  margin-top: auto;
+  text-align: center;
+}
 }
