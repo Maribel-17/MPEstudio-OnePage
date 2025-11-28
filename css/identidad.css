@@ -22,6 +22,14 @@
   font-size: 0.9rem;
 }
 
+.section-identidad h2 {
+  margin-bottom: 2rem;
+  color: var(--color1);
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
 .section-identidad h1 {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
@@ -85,6 +93,7 @@
 .button-identidad {
   text-align: center;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .btn-identidad {
@@ -120,6 +129,10 @@
   .section-identidad h1 {
     font-size: 2.2rem;
   }
+
+  .section-identidad h2 {
+  font-size: 1.8rem;
+}
 
   .section-identidad p {
     font-size: 1.1rem;
@@ -163,6 +176,11 @@
   .section-identidad h1 {
     font-size: 2.8rem;
   }
+
+  .section-identidad h2 {
+  font-size: 2rem;
+  text-align: center;
+}
 
   .section-identidad p {
     font-size: 1.2rem;

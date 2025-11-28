@@ -38,7 +38,7 @@
 }
 
 .section-hablemos p strong {
-  color: var(--color1);
+  color: var(--color3);
 }
 
 .container-img-hablemos {
@@ -61,6 +61,8 @@
   font-size: 1rem;
   display: inline-block;
   margin: 1.5rem 0rem;
+  min-width: 300px;
+  text-align: center;
 }
 
 .btn-hablemos:hover {

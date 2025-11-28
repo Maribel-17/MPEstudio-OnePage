@@ -1,7 +1,7 @@
 /* Estilos generales */
 
 .section-comoTeAyudo {
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 0rem;
   max-width: 1200px;
   margin: 0 auto;
   scroll-margin-top: 100px;
@@ -12,6 +12,31 @@
   color: var(--color2);
   text-align: center;
   font-size: 0.9rem;
+}
+
+.bloque-onepage {
+  background-color: var(--color8); 
+  width: 100vw; 
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw; 
+  padding: 4rem 0;
+}
+
+.bloque-onepage .contenedor {
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 2rem; 
+}
+
+.section-comoTeAyudo h2 {
+  margin-bottom: 1rem;
+  color: var(--color1);
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: underline;
 }
 
 .section-comoTeAyudo h1 {
@@ -55,9 +80,16 @@
   transition: all 0.3s ease;
 }
 
-.img.card {
-  width: 1px;
-  height: auto;
+.img-card{
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.img-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .card h3 {
@@ -74,6 +106,33 @@
   line-height: 1.3rem;
 }
 
+/* Botón */
+.button-comoTeAyudo {
+  text-align: center;
+  width: 100%;
+}
+
+.btn-comoTeAyudo {
+  background-color: var(--color2);
+  color: var(--color11);
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-block;
+  margin-top: 3rem;
+  min-width: 300px;
+  text-align: center;
+}
+
+.btn-comoTeAyudo:hover {
+  background-color: var(--color14);
+}
+
+
+
 @media screen and (min-width: 768px) {
   .section-comoTeAyudo {
     width: 100%;
@@ -82,11 +141,15 @@
   .section-comoTeAyudo h5 {
     font-size: 1rem;
   }
-
+  
   .section-comoTeAyudo h1 {
     font-size: 2.2rem;
     line-height: 1.4;
   }
+
+  .section-comoTeAyudo h2 {
+  font-size: 1.8rem;
+}
 
   .section-comoTeAyudo p {
     font-size: 1.1rem;
@@ -131,6 +194,11 @@
     font-size: 2.8rem;
   }
 
+  .section-comoTeAyudo h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
   .section-comoTeAyudo p {
     font-size: 1.2rem;
   }
@@ -157,4 +225,9 @@
     line-height: 1.3rem;
     margin-top: 0.8rem;
   }
+
+  .button-comoTeAyudo {
+  text-align: left;
+}
+
 }
