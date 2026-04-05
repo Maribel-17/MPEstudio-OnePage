@@ -92,6 +92,13 @@
   text-align: center;
 }
 
+.plan-desde {
+  color: var(--color3);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  }
+
 .plan-precio {
   color: var(--color2);
   font-size: 2rem;
@@ -106,6 +113,15 @@
   margin: 1rem 0;
   font-weight: 700;
 }
+
+.plan-aclaracion {
+  color: var(--color3);
+  font-size: 0.8rem;
+  margin: 1rem 0;
+  font-weight: 700;
+}
+
+
 .listado li,
 .plan-lista li {
   position: relative;
