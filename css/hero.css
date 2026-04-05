@@ -116,9 +116,8 @@
 }
 
 /* Desktop */
-@media screen and (min-width: 1024px) {
+ @media screen and (min-width: 1024px) {
 
-  @media screen and (min-width: 1024px) {
     .hero {
       padding: 15rem 0rem;
     }
@@ -165,44 +164,3 @@
       margin-top: 2rem;
     }
   }
-  
-  
- /*.hero {
-    padding: 12rem 0rem;
- }
-  
-  .contenedor-hero {
-    flex-direction: row-reverse;
-    padding: 4rem 2rem;
-    gap: 2rem;
-    align-items: center;
-  }
-
-  .hero-imagen {
-    max-width: 500px;
-    padding-top: 0;
-  }
-
-  .hero-texto {
-    text-align: left;
-}
-
-  .hero-texto h1 {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .hero-texto h1 strong {
-    font-size: 6rem;
-    line-height: 1.1;
-  }
-
-  .hero-texto p {
-    font-size: 1.4rem;
-    line-height: 2rem;
-  }
-
-  .button {
-    margin-top: 2rem;
-}*/
-}

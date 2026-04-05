@@ -107,6 +107,17 @@
   text-align: center;
 }
 
+.btn-plan-card {
+  display: block;
+  background-color: var(--color2);
+  color: white;
+  text-align: center;
+  padding: 0.7rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
 .plan-incluye {
   color: var(--color3);
   font-size: 1rem;
@@ -114,10 +125,11 @@
   font-weight: 700;
 }
 
-.plan-aclaracion {
+.plan-aclaracion-global {
+  text-align: center;
+  font-size: 0.9rem;
   color: var(--color3);
-  font-size: 0.8rem;
-  margin: 1rem 0;
+  margin: 1.2rem;
   font-weight: 700;
 }
 
@@ -325,6 +337,15 @@
   .plan-incluye {
     font-size: 1.2rem;
   }
+
+  .plan-aclaracion-global {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 2rem;
+  
+}
 
   .listado li,
   .plan-lista li {
