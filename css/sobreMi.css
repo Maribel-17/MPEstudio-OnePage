@@ -1,117 +1,365 @@
-/* Estilos generales */
+/* ================================
+   SECTION SOBRE MÍ
+================================ */
 
 .section-sobreMi {
   background-color: var(--color6);
-  text-align: center;
-  padding: 4rem 2rem 2rem;
+  padding: 4rem 2rem;
   color: var(--color1);
-  margin: 0 auto;
   scroll-margin-top: 100px;
 }
 
-.container-info-sobreMi {
+.section-sobreMi .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+
+/* ================================
+   BLOQUE PRINCIPAL
+================================ */
+
+.sobre-grid {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
 
-.section-sobreMi h5 {
-  margin-bottom: 1rem;
-  letter-spacing: 0.5px;
-  color: var(--color2);
+.sobre-copy {
   text-align: center;
-  font-size: 0.9rem;
 }
 
-.section-sobreMi h1 {
+
+/* ================================
+   ENCABEZADO
+================================ */
+
+.sobre-copy .eyebrow {
+  margin-bottom: 1rem;
+  color: var(--color2);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.sobre-copy h2 {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
-  margin: 2rem 0px 2rem;
+  line-height: 1.3;
   color: var(--color1);
+  margin-bottom: 2rem;
 }
 
-.section-sobreMi p {
+
+/* ================================
+   TEXTOS
+================================ */
+
+.sobre-copy p {
   font-size: 1rem;
+  line-height: 1.6rem;
+  color: var(--color3);
+  margin-bottom: 1.2rem;
   text-align: center;
+}
+
+.sobre-copy p strong {
+  font-size: 1.05rem;
+  color: var(--color3);
+}
+
+
+/* ================================
+   IMAGEN
+================================ */
+
+.sobre-imagen {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sobre-imagen img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* ================================
+   VALORES
+================================ */
+
+.wrapper.valores-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 4.5rem auto 0;
+}
+
+.valores-grid article {
+  background-color: var(--color11);
+  border: 1px solid var(--color7);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================================
+   NÚMEROS
+================================ */
+
+.valores-grid article span {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 0.8rem;
+
+  background-color: var(--color2);
+  border-radius: 50%;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color11);
+}
+
+
+/* ================================
+   TEXTOS DE VALORES
+================================ */
+
+.valores-grid article h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15rem;
+  color: var(--color1);
+  margin-bottom: 0.5rem;
+}
+
+.valores-grid article p {
+  font-size: 0.85rem;
+  line-height: 1.4rem;
+  color: var(--color4);
+}
+
+
+/* ================================
+   VALOR DESTACADO
+================================ */
+
+.valores-grid .valor-destacado {
+  background-color: var(--color2);
+  border-color: var(--color2);
+}
+
+.valores-grid .valor-destacado span {
+  background-color: var(--color11);
+  color: var(--color2);
+}
+
+.valores-grid .valor-destacado h3,
+.valores-grid .valor-destacado p {
+  color: var(--color11);
+}
+
+
+/* ================================
+   CIERRE
+================================ */
+
+.wrapper.sobre-cierre {
+  margin: 3.5rem auto 0;
+
+  padding: 1.2rem 1.8rem;
+
+  background-color: var(--color7);
+  border-radius: 10px;
+
+  color: var(--color3);
+
+  font-size: 0.9rem;
   line-height: 1.5rem;
-  color: var(--color3);
+  font-weight: 600;
+  font-style: italic;
+
+  text-align: center;
 }
 
-.section-sobreMi p strong {
-  color: var(--color3);
-  font-size: 1.1rem;
-}
 
-.container-img-sobreMi {
-  margin: 2rem 0px;
-}
-
-.container-img-sobreMi:hover {
-  transform: scale(1.1) rotate(-2deg);
-  transition: transform 0.3s ease;
-}
+/* ================================
+   TABLET
+================================ */
 
 @media screen and (min-width: 768px) {
-  .section-sobreMi h5 {
+
+  .sobre-copy .eyebrow {
     font-size: 1rem;
   }
 
-  .section-sobreMi h1 {
+  .sobre-copy h2 {
     font-size: 2.2rem;
   }
 
-  .section-sobreMi p {
-    font-size: 1.1rem;
-    line-height: 1.8rem;
+  .sobre-copy p {
+    font-size: 1.05rem;
+    line-height: 1.7rem;
   }
 
-  .container-img-sobreMi {
-    max-width: 500px;
-    margin: 2rem auto;
-    width: 100%;
+  .sobre-copy p strong {
+    font-size: 1.1rem;
   }
+
+  .sobre-imagen {
+    max-width: 450px;
+  }
+
+  .wrapper.valores-grid {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin: 5rem auto 0;
+  }
+
+  .valores-grid article {
+    flex: 1;
+    padding: 1.5rem;
+  }
+
+  .valores-grid article span {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .valores-grid article h3 {
+    font-size: 1.2rem;
+  }
+
+  .valores-grid article p {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+
+   .wrapper.sobre-cierre {
+    margin: 3.5rem auto 0;
+    padding: 1.2rem 2.5rem;
+
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+  }
+
 }
+
+
+/* ================================
+   DESKTOP
+================================ */
 
 @media screen and (min-width: 1024px) {
 
-  .container-info-sobreMi {
-    display: flex;
-    flex-direction: row;
-    gap: 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 0 2rem;
+  .section-sobreMi {
+    padding: 5rem 2rem;
   }
 
-  .section-sobreMi h5 {
+
+  /* BLOQUE TEXTO + IMAGEN */
+
+  .sobre-grid {
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    gap: 5rem;
+
+    align-items: center;
+  }
+
+  .sobre-copy {
+    text-align: left;
+  }
+
+
+  /* ENCABEZADO */
+
+  .sobre-copy .eyebrow {
+    font-size: 1rem;
+  }
+
+  .sobre-copy h2 {
+    font-size: 2.5rem;
+    line-height: 1.25;
+
+    margin-bottom: 2.5rem;
+  }
+
+
+  /* TEXTOS */
+
+  .sobre-copy p {
+    font-size: 1rem;
+    line-height: 1.65rem;
+
+    text-align: left;
+
+    margin-bottom: 1.4rem;
+  }
+
+  .sobre-copy p strong {
     font-size: 1.1rem;
-    text-align: left;
   }
 
-  .section-sobreMi h1 {
-    font-size: 2.8rem;
-    text-align: left;
+
+  /* IMAGEN */
+
+  .sobre-imagen {
+    max-width: 430px;
+    margin: 0 auto;
   }
 
-  .section-sobreMi p {
+
+  /* VALORES */
+
+ .wrapper.valores-grid {
+    gap: 2rem;
+    margin: 5rem auto 0;
+  }
+
+  .valores-grid article {
+    padding: 1.4rem 2rem;
+  }
+
+  .valores-grid article span {
+    width: 32px;
+    height: 32px;
+
+    font-size: 0.9rem;
+
+    margin-bottom: 0.8rem;
+  }
+
+  .valores-grid article h3 {
     font-size: 1.2rem;
-    text-align: justify;
   }
 
-  .section-sobreMi p strong {
-    font-size: 1.3rem;
+  .valores-grid article p {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
   }
 
-  .container-texto-sobreMi {
-    flex: 1;
-    max-width: 50%;
+
+  /* CIERRE */
+
+ .wrapper.sobre-cierre {
+    margin: 3.5rem auto 0;
+    padding: 1.2rem 3rem;
+
+    font-size: 0.95rem;
+    line-height: 1.5rem;
   }
 
-  .container-img-sobreMi {
-    flex: 1;
-    max-width: 50%;
-    width: 100%;
-  }
 }
