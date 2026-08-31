@@ -1,166 +1,364 @@
-/* Estilos generales */
+/* ================================
+   HERO
+================================ */
+
 .hero {
-  background-image: url("../img/fondoInicio.svg");
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  width: 100%;
+  background-color: var(--color6);
+  padding: 8.6rem 1.5rem 4.5rem;
+}
+
+/* Textura suave de fondo */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/textura-hero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  padding: 4rem 2rem;
-  position: relative;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.contenedor-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
+
+/* ================================
+   LÍNEAS DECORATIVAS
+================================ */
+
+.hero-lineas {
+  position: absolute;
+  left: -18px;
+  top: 58%;
+  transform: translateY(-50%);
+  width: 95px;
+  height: 210px;
+  background-image: url("../img/lineas-lila.png");
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+  opacity: 0.36;
+  pointer-events: none;
   z-index: 1;
 }
 
-/* Imagen */
-.hero-imagen {
-  max-width: 400px;
+
+/* ================================
+   CONTENEDOR
+================================ */
+
+.contenedor-hero {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+  text-align: center;
 }
 
-.hero-imagen img {
+
+/* ================================
+   TEXTO
+================================ */
+
+.hero-texto {
+  order: 1;
   width: 100%;
-  height: auto;
-  display: block;
-  padding-top: 100px;
+  position: relative;
+  z-index: 3;
 }
 
-/* Texto */
 .hero-texto h1 {
   font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.95rem;
+  line-height: 1.02;
   color: var(--color1);
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  line-height: 1;
+  margin: 0 0 1rem;
+}
+
+.hero-texto h1 span {
+  display: block;
 }
 
 .hero-texto h1 strong {
+  position: relative;
+  display: inline-block;
   font-family: "Protest Riot", sans-serif;
-  font-size: 3rem;
-  display: block;
+  font-size: 3.7rem;
+  line-height: 0.92;
   color: var(--color1);
-  margin-bottom: 1.5rem;
+  margin-top: 0.15rem;
+  margin-bottom: 1.45rem;
 }
 
+
+/* ================================
+   SUBRAYADO VERDE
+================================ */
+
+.hero-texto h1 strong::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  bottom: -14px;
+  width: 200px;
+  height: 8px;
+  background-color: var(--color16);
+  border-radius: 999px;
+  transform: rotate(-2deg);
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+/* ================================
+   PÁRRAFO
+================================ */
 
 .hero-texto p {
-  font-size: 1rem;
-  color: var(--color1);
   max-width: 100%;
   margin: 0 auto;
-  margin-bottom: 1rem;
-  line-height: 1.8rem;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: var(--color1);
 }
 
-/* Botón */
+.hero-texto p strong {
+  font-weight: 700;
+}
+
+
+/* ================================
+   BOTÓN
+================================ */
+
 .button-hero {
-  text-align: center;
   width: 100%;
+  text-align: center;
+  margin-top: 1.7rem;
 }
 
 .btn-hero {
+  display: inline-block;
+  min-width: 300px;
+  padding: 0.85rem 1.6rem;
   background-color: var(--color2);
   color: var(--color11);
-  padding: 0.8rem 1.6rem;
   border: none;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  display: inline-block;
-  margin: 1.5rem 0rem;
-  min-width: 300px;
   text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-hero:hover {
   background-color: var(--color14);
+  transform: translateY(-2px);
 }
 
 
-/* Tablet */
+/* ================================
+   IMAGEN
+================================ */
+
+.hero-imagen {
+  order: 2;
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-imagen::before {
+  display: none;
+}
+
+
+/* ================================
+   COLLAGE VIOLETA
+================================ */
+
+.hero-imagen::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  right: -72px;
+  width: 128%;
+  height: 92%;
+  background-image: url("../img/collage-violeta.png");
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  opacity: 0.98;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-imagen img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 330px;
+  height: auto;
+  display: block;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
 @media screen and (min-width: 768px) {
 
-.contenedor-hero {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+  .hero {
+    padding: 8.8rem 2rem 5rem;
+  }
 
-  .hero-imagen {
-    max-width: 350px;
+  .hero-lineas {
+    left: -10px;
+    top: 60%;
+    width: 125px;
+    height: 270px;
+    opacity: 0.34;
+  }
+
+  .contenedor-hero {
+    gap: 2.7rem;
   }
 
   .hero-texto h1 {
-    font-size: 2rem;
-    line-height: 1.2;
+    font-size: 2.35rem;
   }
 
   .hero-texto h1 strong {
-    font-size: 4rem;
+    font-size: 4.8rem;
+    margin-bottom: 1.55rem;
+  }
+
+  .hero-texto h1 strong::after {
+    right: -14px;
+    bottom: -16px;
+    width: 250px;
+    height: 10px;
   }
 
   .hero-texto p {
-    font-size: 1.2rem;
-    margin: 1rem 0rem;
+    max-width: 610px;
+    font-size: 1.06rem;
+    line-height: 1.85rem;
+  }
+
+  .hero-imagen {
+    max-width: 430px;
+  }
+
+  .hero-imagen::after {
+    top: -18px;
+    right: -90px;
+    width: 138%;
+    height: 95%;
+  }
+
+  .hero-imagen img {
+    max-width: 390px;
   }
 }
 
-/* Desktop */
- @media screen and (min-width: 1024px) {
 
-    .hero {
-      padding: 15rem 0rem;
-    }
-  
-    .contenedor-hero {
-      flex-direction: row-reverse;
-      align-items: center;
-      gap: 2rem;
-      padding: 0 2rem;
-    }
-  
-    .hero-imagen {
-      max-width: 800px; 
-      flex: 1;
-    }
-  
-    .hero-imagen img {
-      padding-top: 0;
-    }
-  
-    .hero-texto {
-      text-align: left;
-      flex: 1;
-    }
-  
-    .hero-texto h1 {
-      font-size: 3rem;
-      line-height: 1;
-    }
-  
-    .hero-texto h1 strong {
-      font-size: 6rem;
-      line-height: 1.1;
-    }
-  
-    .hero-texto p {
-      font-size: 1.4rem;
-      line-height: 2rem;
-      margin: 1.5rem 0;
-    }
-  
-    .button-hero {
-      text-align: left;
-      margin-top: 2rem;
-    }
+/* ================================
+   DESKTOP
+================================ */
+
+@media screen and (min-width: 1024px) {
+
+  .hero {
+    padding: 15rem 0;
   }
+
+  .hero-lineas {
+    left: 0;
+    top: 56%;
+    width: 155px;
+    height: 330px;
+    opacity: 0.30;
+  }
+
+  .contenedor-hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    text-align: left;
+    padding: 0 2rem;
+  }
+
+  .hero-texto {
+    order: 1;
+    flex: 0 0 46%;
+    max-width: 520px;
+    text-align: left;
+  }
+
+  .hero-texto h1 {
+    font-size: 3.15rem;
+    line-height: 0.98;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-texto h1 strong {
+    font-size: 5.9rem;
+    line-height: 0.92;
+    margin-bottom: 1.65rem;
+  }
+
+  .hero-texto h1 strong::after {
+    left: auto;
+    right: -18px;
+    bottom: -18px;
+    width: 300px;
+    height: 12px;
+    transform: rotate(-2deg);
+  }
+
+  .hero-texto p {
+    max-width: 500px;
+    margin: 0;
+    font-size: 1.12rem;
+    line-height: 1.95rem;
+  }
+
+  .button-hero {
+    text-align: left;
+    margin-top: 2rem;
+  }
+
+  .hero-imagen {
+    order: 2;
+    flex: 0 0 50%;
+    max-width: 620px;
+  }
+
+  .hero-imagen::after {
+    top: -20px;
+    right: -185px;
+    width: 152%;
+    height: 98%;
+    background-position: right center;
+  }
+
+  .hero-imagen img {
+    max-width: 510px;
+  }
+}

@@ -3,14 +3,43 @@
 ================================ */
 
 .section-servicios {
+  position: relative;
+  overflow: hidden;
+
   background-color: var(--color11);
+
   padding: 4rem 2rem;
+
   text-align: center;
+
   scroll-margin-top: 100px;
 }
 
+/* Textura de papel muy sutil */
+.section-servicios::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../img/textura-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.035;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
 .section-servicios .wrapper {
+  position: relative;
+  z-index: 1;
+
   max-width: 1200px;
+
   margin: 0 auto;
 }
 
@@ -21,27 +50,66 @@
 
 .section-servicios .eyebrow {
   margin-bottom: 1rem;
+
   color: var(--color2);
+
   text-align: center;
+
   font-size: 0.9rem;
+
   font-weight: 600;
+
   letter-spacing: 0.5px;
 }
 
 .section-servicios h2 {
+  position: relative;
+
+  display: inline-block;
+
   font-family: "Poppins", sans-serif;
+
   font-size: 1.8rem;
+
   line-height: 1.3;
+
   color: var(--color1);
+
   margin-bottom: 2rem;
+}
+
+/* Pequeño acento verde */
+.section-servicios h2::after {
+  content: "";
+
+  position: absolute;
+
+  right: 4px;
+
+  bottom: -9px;
+
+  width: 110px;
+
+  height: 5px;
+
+  background-color: #c8f34b;
+
+  border-radius: 999px;
+
+  transform: rotate(-2deg);
 }
 
 .section-servicios .section-intro {
   font-size: 1rem;
+
   color: var(--color3);
+
   line-height: 1.8rem;
+
   max-width: 900px;
+
   margin: 0 auto;
+
   text-align: center;
 }
 
@@ -52,8 +120,11 @@
 
 .servicios-grid {
   display: flex;
+
   flex-direction: column;
+
   gap: 2rem;
+
   margin-top: 3rem;
 }
 
@@ -64,20 +135,35 @@
 
 .servicio-card {
   position: relative;
+
   background-color: var(--color11);
+
+  border: 1px solid rgba(104, 66, 255, 0.10);
+
   border-radius: 20px;
+
   padding: 2rem;
+
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  box-shadow: 0 4px 10px rgba(47, 28, 106, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 
   display: flex;
+
   flex-direction: column;
 }
 
 .servicio-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  border-color: rgba(104, 66, 255, 0.28);
+
+  box-shadow: 0 10px 22px rgba(47, 28, 106, 0.10);
 }
 
 .servicio-card:nth-child(2) {
@@ -95,10 +181,20 @@
 
 .servicio-icono {
   position: absolute;
+
   top: 1.3rem;
+
   right: 1.3rem;
+
   width: 34px;
+
   height: auto;
+
+  transition: transform 0.3s ease;
+}
+
+.servicio-card:hover .servicio-icono {
+  transform: rotate(-4deg) scale(1.06);
 }
 
 
@@ -108,10 +204,15 @@
 
 .servicio-numero {
   display: block;
+
   font-family: "Poppins", sans-serif;
+
   font-size: 1rem;
+
   font-weight: 700;
+
   color: var(--color2);
+
   margin-bottom: 0.8rem;
 }
 
@@ -122,15 +223,21 @@
 
 .servicio-card h3 {
   font-family: "Poppins", sans-serif;
+
   font-size: 1.4rem;
+
   color: var(--color1);
+
   margin-bottom: 1rem;
 }
 
 .servicio-card h4 {
   font-size: 1rem;
+
   line-height: 1.5rem;
+
   color: var(--color5);
+
   margin-bottom: 1rem;
 }
 
@@ -141,8 +248,11 @@
 
 .servicio-card p {
   font-size: 0.9rem;
+
   line-height: 1.5rem;
+
   color: var(--color3);
+
   text-align: center;
 }
 
@@ -153,20 +263,38 @@
 
 .servicio-tags {
   display: flex;
+
   flex-wrap: wrap;
+
   justify-content: center;
+
   gap: 0.5rem;
+
   margin: 1.5rem 0;
+
   padding: 0;
 }
 
 .servicio-tags li {
   font-size: 0.8rem;
+
   font-weight: 700;
+
   color: var(--color2);
+
   background-color: var(--color7);
+
   padding: 0.4rem 0.7rem;
+
   border-radius: 20px;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.servicio-card:hover .servicio-tags li {
+  transform: translateY(-1px);
 }
 
 
@@ -176,12 +304,17 @@
 
 .servicio-card .servicio-nota {
   margin-top: auto;
+
   padding-top: 1rem;
+
   border-top: 1px solid var(--color7);
 
   font-size: 0.8rem;
+
   line-height: 1.3rem;
+
   font-weight: 400;
+
   color: var(--color4);
 }
 
@@ -192,33 +325,54 @@
 
 .servicios-cta {
   margin-top: 3rem;
+
   text-align: center;
 }
 
 .servicios-cta p {
   margin-bottom: 1.5rem;
+
   color: var(--color3);
+
   font-size: 1rem;
+
   font-weight: 600;
+
   line-height: 1.5rem;
 }
 
 .servicios-cta .btn-primary {
   background-color: var(--color2);
+
   color: var(--color11);
+
   padding: 0.8rem 1.6rem;
+
   border: none;
+
   border-radius: 8px;
+
   text-decoration: none;
+
   font-weight: bold;
+
   font-size: 1rem;
+
   display: inline-block;
+
   min-width: 300px;
+
   text-align: center;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .servicios-cta .btn-primary:hover {
   background-color: var(--color14);
+
+  transform: translateY(-2px);
 }
 
 
@@ -236,8 +390,19 @@
     font-size: 2.2rem;
   }
 
+  .section-servicios h2::after {
+    right: 5px;
+
+    bottom: -10px;
+
+    width: 130px;
+
+    height: 6px;
+  }
+
   .section-servicios .section-intro {
     font-size: 1.1rem;
+
     line-height: 1.8rem;
   }
 
@@ -247,7 +412,9 @@
 
   .servicio-icono {
     width: 40px;
+
     top: 1.5rem;
+
     right: 1.5rem;
   }
 
@@ -257,22 +424,27 @@
 
   .servicio-card h3 {
     font-size: 1.5rem;
+
     white-space: nowrap;
   }
 
   .servicio-card h4 {
     font-size: 1.1rem;
+
     line-height: 1.6rem;
   }
 
   .servicio-card p {
     font-size: 1rem;
+
     line-height: 1.6rem;
+
     text-align: left;
   }
 
   .servicio-card .servicio-nota {
     font-size: 0.8rem;
+
     line-height: 1.3rem;
   }
 
@@ -305,24 +477,39 @@
     font-size: 2.8rem;
   }
 
+  .section-servicios h2::after {
+    right: 6px;
+
+    bottom: -11px;
+
+    width: 180px;
+
+    height: 7px;
+  }
+
   .section-servicios .section-intro {
     font-size: 1.2rem;
   }
 
   .servicios-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 2rem;
   }
 
   .servicio-card {
     padding: 2rem;
+
     min-height: 430px;
   }
 
   .servicio-icono {
     width: 44px;
+
     top: 1.6rem;
+
     right: 1.6rem;
   }
 
@@ -332,22 +519,27 @@
 
   .servicio-card h3 {
     font-size: 1.55rem;
+
     white-space: nowrap;
   }
 
   .servicio-card h4 {
     font-size: 1.2rem;
+
     line-height: 1.7rem;
   }
 
   .servicio-card p {
     font-size: 1.1rem;
+
     line-height: 1.7rem;
   }
 
   .servicio-card .servicio-nota {
     margin-top: auto;
+
     font-size: 0.85rem;
+
     line-height: 1.4rem;
   }
 
